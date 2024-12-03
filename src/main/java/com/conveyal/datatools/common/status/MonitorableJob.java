@@ -199,7 +199,7 @@ public abstract class MonitorableJob implements Runnable, Serializable {
                 cancel(cancelMessage);
             }
             // Complete the job (as success if no errors encountered, as failure otherwise).
-            if (!parentJobErrored && !subTaskErrored) status.completeSuccessfully("Job complete!");
+            if (!parentJobErrored && !subTaskErrored) status.completeSuccessfully("Opération réussie !");
             else status.complete(true);
             // Run final steps of job pending completion or error. Note: any tasks that depend on job success should
             // check job status in jobFinished to determine if final step should be executed (e.g., storing feed

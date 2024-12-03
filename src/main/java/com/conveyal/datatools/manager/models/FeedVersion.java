@@ -109,7 +109,7 @@ public class FeedVersion extends Model implements Serializable {
         this(source, snapshot.retrievalMethod);
         // Set feed version properties.
         originNamespace = snapshot.namespace;
-        name = snapshot.name + " Snapshot Export";
+        name = snapshot.name;
     }
 
     private String generateFeedVersionId(FeedSource source) {
